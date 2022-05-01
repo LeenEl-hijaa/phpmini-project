@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(239, 247, 252);
+}
+#logo{
+    width: 30%;
+    height: 20%;
+}
+#flogo {
+    width: 40%;
+    height: 50%;
+}
+
+.fa-facebook, .fa-twitter , .fa-instagram {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    margin-right: 5%;
+    color: white;
+}
+.star {
+    color: rgba(193, 178, 137, 0.5);
+}
+#error {
+    background-color: white;
+    border: 1px;
+    border-radius: 50px;
+    margin-top: 7%;
+    margin-bottom: 3%;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+
+.navbar-brand{
+    font-size: 70px;
+    color: gray;
+}
+
+.nav-item{
+font-size: 30px;
+}

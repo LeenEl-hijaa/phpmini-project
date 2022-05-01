@@ -1,0 +1,51 @@
+body {
+    /* background-image: url(); */
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-size: cover;
+}
+
+.container {
+    background-color:rgb(239, 247, 252);
+    border: 1px;
+    border-radius: 2rem;
+    margin-top: 7%;
+    margin-bottom: 3%;
+    padding: 5%;
+}
+#table-div{
+    background-color: white;
+}
+
+.table {
+    border: 1px solid;
+    border-radius: 50px;
+}
+
+#logo {
+    width: 30%;
+    height: 20%;
+}
+
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    margin-right: 5%;
+    color: white;
+}
+
+.navbar-brand{
+    font-size: 50px;
+    color: gray;
+}
+
+.nav-item{
+font-size: 30px;
+}
+/* .nav-link
+{
+text-align:center;
+} *‎
