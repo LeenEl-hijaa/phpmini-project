@@ -54,11 +54,11 @@ session_start();
         echo ('<div class="col-md-4 mt-2">
         <div class="card">
             <div class="card-body">
-                <div class="card-img-actions"> <img src="images/RM-logos_black.png" class="card-img img-fluid" width="96" height="350" alt="Image"> </div>
+                <div class="card-img-actions"> <img src="product1.png" class="card-img img-fluid" width="96" height="350" alt="Image"> </div>
             </div>
             <div class="card-body bg-light text-center">
                 <div class="mb-2">
-                    <h5 class="font-weight-semibold mb-2" style="color:#80765c;">' . $arr1[$i] . '</h5><p class="text-muted" data-abc="true">' . $arr3[$i] . '</p>
+                    <h5 class="font-weight-semibold mb-2" style="color:#80765c;">' . $arr1[$i] . '</p>
                     </div>
                     <h4 class="mb-0 font-weight-semibold">$' . $arr2[$i] . '</h4>
                     <div> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i> <i class="fa fa-star star"></i></div>

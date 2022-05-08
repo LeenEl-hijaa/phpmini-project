@@ -52,6 +52,10 @@
                 <input type="file" class="form-control" id="pic" name="picture" accept="image/*" required>
                 
             </div>
+            <div class="form-group">
+                <label for="desc">Description: </label>
+                <textarea name="description" id="desc" cols="30" rows="10" class="form-control" Required></textarea>
+            </div>
             <br>
             <button type="submit" class="btn btn-primary" name="add" id="add"  >Add Item</button>
             <button class="btn btn-primary" id="btn" style="display: inline-block;"><a href="view-products-page.php"style="color: white; text-decoration:none;">Show Items</a></button>
@@ -67,6 +71,7 @@
                 <tr>
                     <th scope="col">Product Name</th>
                     <th scope="col">Price</th>
+                    <th scope="col">Description</th>
                     <th scope="col">Product Picture</th>
                 </tr>
             </thead>
@@ -76,6 +81,7 @@
                 if(isset($_POST['add'])){
                     $_SESSION['n'].=$_POST['pname'].'<br>';
                     $_SESSION['p'].=$_POST['price'].'<br>';
+                    $_SESSION['d'].=$_POST['description'].'<br>';
                     $_SESSION['ph'].=$_POST['picture'].'<br>';
                     echo ('<tr><td>' . $_SESSION['n'] . '</td><td>' . $_SESSION['p'] . '</td><td>' . $_SESSION['d'] . '</td><td>' . $_SESSION['ph']. '</td></tr>');
                 }
