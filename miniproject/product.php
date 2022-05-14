@@ -77,13 +77,21 @@
             </thead>
             <tbody id="info">
             <?php 
-                
-                if(isset($_POST['add'])){
-                    $_SESSION['n'].=$_POST['pname'].'<br>';
-                    $_SESSION['p'].=$_POST['price'].'<br>';
-                    $_SESSION['d'].=$_POST['description'].'<br>';
-                    $_SESSION['ph'].=$_POST['picture'].'<br>';
-                    echo ('<tr><td>' . $_SESSION['n'] . '</td><td>' . $_SESSION['p'] . '</td><td>' . $_SESSION['d'] . '</td><td>' . $_SESSION['ph']. '</td></tr>');
+                if (isset($_POST['add'])) {
+                    if (!(file_exists("images/" . $_FILES["file"]["name"]))) {
+                        move_uploaded_file($_FILES["file"]["tmp_name"], "images/" . $_FILES["file"]["name"]);
+                    }
+                    $_SESSION['name'] .= $_POST['pname'] . '<br>';
+                    $_SESSION['pricee'] .= $_POST['price'] . '<br>';
+                    $_SESSION['descriptions'] .= $_POST['description'] . '<br>';
+                    $_SESSION['photo'] .= $_FILES["file"]["name"] . '<br>';
+                    $arr1 = explode("<br>", $_SESSION['name']);
+                    $arr2 = explode("<br>", $_SESSION['pricee']);
+                    $arr3 = explode("<br>", $_SESSION['descriptions']);
+                    $arr4 = explode("<br>", $_SESSION['photo']);
+                    for ($i = 0; $i < count($arr1) - 1; $i++) {
+                        echo ('<tr><td>' . $arr1[$i] . '</td><td>' . $arr2[$i] . '</td><td>' . $arr3[$i] . '</td><td><img src="images/' . $arr4[$i] . '" alt="Image" id="pimage"></td></tr><br>');
+                    }
                 }
                 // session_unset();
             ?>
